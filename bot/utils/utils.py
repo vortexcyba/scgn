@@ -287,13 +287,13 @@ class Utilities:
 
         if cb:
             try:
-                await m.edit_message_reply_markup(InlineKeyboardMarkup(settings_btn))
-            except Exception:
+                await m.message.edit(text=Messages.SETTINGS, reply_markup=InlineKeyboardMarkup(settings_btn))
+            except:
                 pass
             return
 
         await m.reply_text(
-            text="Here You can configure my behavior.\n\nPress the button to change the settings.",
+            text=Messages.SETTINGS,
             quote=True,
             reply_markup=InlineKeyboardMarkup(settings_btn),
         )
