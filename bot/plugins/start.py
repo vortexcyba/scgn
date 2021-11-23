@@ -12,7 +12,7 @@ async def start(c, m, cb=False):
     mention = '[Jerin](https://t.me/imjerin)'
     try:
         owner = await c.get_users(owner_id)
-        username = owner.username if owner.username else 'Ns_AnoNymous'
+        username = owner.username if owner.username else 'imjerin'
         mention = owner.mention(style="md")
     except Exception as e:
         print(e)
@@ -27,7 +27,7 @@ async def start(c, m, cb=False):
     ]]
 
     TEXT = f"👋 Hi {m.from_user.mention},\n\nI'm Screenshot Generator Bot. I can provide screenshots, sample video from "
-    TEXT += "your video files and also can trim. For more details check help.\n\n"
+    TEXT += "your video files and also can trim them almost instantly without downloading the entire file. For more details check help.\n\n"
     TEXT += f"**Maintained By:** {mention}"
 
     if cb:
@@ -46,8 +46,6 @@ async def start(c, m, cb=False):
         )
 
 
-# i generally liked to use regex filters for callback 
-# but since odysseusmax used lambda i am also using the same
 @ScreenShotBot.on_callback_query(
     filters.create(lambda _, __, query: query.data.startswith("home"))
 )
