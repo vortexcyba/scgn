@@ -73,7 +73,7 @@ class Utilities:
         return thumb_file
 
 
-
+    @staticmethod
     def pack_id(msg):
         file_id = 0
         chat_id_offset = 2
