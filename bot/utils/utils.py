@@ -74,7 +74,7 @@ class Utilities:
 
 
     @staticmethod
-    def pack_id(msg):
+    async def pack_id(msg):
         file_id = 0
         chat_id_offset = 2
         pack_bits = 32
