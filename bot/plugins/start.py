@@ -21,5 +21,5 @@ async def start(c, m):
                         "Settings", callback_data="set+settings")
                 ]
             ]
-         ),
+         )
     )
