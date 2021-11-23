@@ -75,14 +75,14 @@ class Utilities:
 
     @staticmethod
     async def pack_id(msg):
-        file_id = 0
-        chat_id_offset = 2
-        pack_bits = 32
-        msg_id_offset = pack_bits + chat_id_offset
+          file_id = 0
+          chat_id_offset = 2
+          pack_bits = 32
+          msg_id_offset = pack_bits + chat_id_offset
     
-        file_id |= msg.chat.id << chat_id_offset
-        file_id |= msg.message_id << msg_id_offset
-        return file_id
+          file_id |= msg.chat.id << chat_id_offset
+          file_id |= msg.message_id << msg_id_offset
+          return file_id
 
     @staticmethod
     def generate_stream_link(media_msg):
