@@ -49,7 +49,7 @@ class MediaInfoProcess(BaseProcess):
             media_info = await Utilities.get_media_info(self.file_link)
             log.debug(media_info)
             media_info_file = io.BytesIO()
-            media_info_file.name = "mediainfo.json"
+            media_info_file.name = "mediainfo.txt"
             media_info_file.write(media_info)
 
             await self.media_message.reply_document(
