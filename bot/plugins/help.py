@@ -1,8 +1,14 @@
 from pyrogram import filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from bot.screenshotbot import ScreenShotBot
 from bot.config import Config
 
+
+BUTTONS = [[
+    InlineKeyboardButton('Home 🏡', callback_data='home'),
+    InlineKeyboardButton('Close 📛', callback_data='close')
+]]
 
 HELP_TEXT = """
 Hi {mention}. Welcome to Screenshot Generator Bot. You can use me to generate:
@@ -21,7 +27,7 @@ Use /set_watermark to set custom watermarks to your screenshots.
 **General FAQ.**
 
 👉 If the bot dosen't respond to telegram files you forward, first check /start and --confirm bot is alive--. Then make sure the file is a **video file** which satisfies above mentioned conditions.
-👉 If bot replies __😟 Sorry! I cannot open the file.__, the file might be --currupted-- or --is malformatted--.
+👉 If bot replies __😟 Sorry! I cannot open the file.__, the file might be --corrupted-- or --is malformatted--.
 
 __If issues persists contact my father.__
 
@@ -42,5 +48,22 @@ async def help_(c, m):
             if m.from_user.id in Config.AUTH_USERS
             else "",
         ),
+        reply_markup=InlineKeyboardMarkup(BUTTONS),
         quote=True,
+    )
+
+
+@ScreenShotBot.on_callback_query(
+    filters.create(lambda _, __, query: query.data.startswith("help"))
+)
+async def help_cb(c, m):
+    await m.answer()
+    await m.message.edit(
+        text=HELP_TEXT.format(
+            mention=m.from_user.mention,
+            admin_notification=ADMIN_NOTIFICATION_TEXT
+            if m.from_user.id in Config.AUTH_USERS
+            else "",
+        ),
+        reply_markup=InlineKeyboardMarkup(BUTTONS)
     )
