@@ -16,9 +16,9 @@ async def start(c, m):
             [
                 [
                     InlineKeyboardButton(
-                        "Maintained By", url="https://t.me/imjerin"),
+                        "👤 Maintained By", url="https://t.me/imjerin"),
                     InlineKeyboardButton(
-                        "Settings", callback_data="set+settings")
+                        "⚙️ Settings", callback_data="set+settings")
                 ]
             ]
          )
