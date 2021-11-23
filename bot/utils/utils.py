@@ -87,7 +87,7 @@ class Utilities:
     @staticmethod
     def generate_stream_link(media_msg):
         file_id = pack_id(media_msg)
-    return f"{Config.HOST}/stream/{file_id}"
+        return f"{Config.HOST}/stream/{file_id}"
 
     @staticmethod
     async def get_media_info(file_link):
