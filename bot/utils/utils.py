@@ -7,6 +7,7 @@ from urllib.parse import urljoin
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from bot.config import Config
+from bot.messages import Messages
 
 
 log = logging.getLogger(__name__)
