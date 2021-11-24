@@ -26,8 +26,8 @@ async def start(c, m, cb=False):
         InlineKeyboardButton("Close 📛", callback_data="close")
     ]]
 
-    TEXT = f"👋 Hi {m.from_user.mention},\n\nI'm Screenshot Generator Bot. I can provide screenshots, sample video from "
-    TEXT += "your video files and also can trim them almost instantly without downloading the entire file. For more details check help.\n\n"
+    TEXT = f"__👋 Hi {m.from_user.mention},\n\nI'm Screenshot Generator Bot. I can provide screenshots, sample video from__"
+    TEXT += "__your video files and also can trim them almost instantly without downloading the entire file. For more details check help.__\n\n"
     TEXT += f"**Maintained By:** {mention}"
 
     if cb:
