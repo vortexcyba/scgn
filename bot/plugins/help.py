@@ -6,7 +6,7 @@ from bot.config import Config
 
 
 BUTTONS = [[
-    InlineKeyboardButton(Hᴏᴍᴇ 🏡', callback_data='home'),
+    InlineKeyboardButton('Hᴏᴍᴇ 🏡', callback_data='home'),
     InlineKeyboardButton('Cʟᴏsᴇ 📛', callback_data='close')
 ]]
 
