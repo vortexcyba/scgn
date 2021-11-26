@@ -68,7 +68,5 @@ class ScreenShotBot(Client):
                 client=self, broadcast_message=broadcast_message
             )
             await broadcast_handler.start()
-
-                await reply_message.edit_text("Broadcast completed")
         except Exception as e:
             log.error(e, exc_info=True)
