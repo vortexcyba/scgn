@@ -119,8 +119,8 @@ async def broadcast_(c, m):
     
     await aiofiles.os.remove('broadcast.txt')
     
-@ScreenShotBot.on_callback_query(Filters.create(lambda _, query: query.data.startswith('sts_bdct')) 
-                                 & Filters.user(Config.AUTH_USERS))
+@ScreenShotBot.on_callback_query(filters.create(lambda _, query: query.data.startswith('sts_bdct')) 
+                                 & filters.user(Config.AUTH_USERS))
 async def sts_broadcast_(c, cb):
     
     _, broadcast_id = cb.data.split('+')
@@ -141,8 +141,8 @@ async def sts_broadcast_(c, cb):
         show_alert=True
     )
     
-@ScreenShotBot.on_callback_query(Filters.create(lambda _, query: query.data.startswith('cncl_bdct')) 
-                                 & Filters.user(Config.AUTH_USERS))
+@ScreenShotBot.on_callback_query(filters.create(lambda _, query: query.data.startswith('cncl_bdct')) 
+                                 & filters.user(Config.AUTH_USERS))
 async def cncl_broadcast_(c, cb):
     
     _, broadcast_id = cb.data.split('+')
