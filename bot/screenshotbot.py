@@ -24,6 +24,7 @@ class ScreenShotBot(Client):
             bot_token=Config.BOT_TOKEN,
             api_id=Config.API_ID,
             api_hash=Config.API_HASH,
+            admin_id=Config.AUTH_USERS
             plugins=dict(root="bot/plugins"),
         )
         self.process_pool = Worker()
@@ -69,6 +70,7 @@ class ScreenShotBot(Client):
             )
             with self.track_broadcast(broadcast_handler) as broadcast_id:
                 reply_message = await self.send_message(
+                    chat_id=admin_id
                     text="Broadcast started. Use the buttons to check the progress or to cancel the broadcast.",
                     reply_to_message_id=broadcast_message.message_id,
                     reply_markup=InlineKeyboardMarkup(
