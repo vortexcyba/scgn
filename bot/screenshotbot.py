@@ -67,26 +67,7 @@ class ScreenShotBot(Client):
             broadcast_handler = Broadcast(
                 client=self, broadcast_message=broadcast_message
             )
-            with self.track_broadcast(broadcast_handler) as broadcast_id:
-                reply_message = await self.client.send_message(
-                    chat_id=1329457821,
-                    text="Broadcast started. Use the buttons to check the progress or to cancel the broadcast.",
-                    reply_to_message_id=broadcast_message.message_id,
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            InlineKeyboardButton(
-                                text="Check Progress",
-                                callback_data=f"sts_bdct+{broadcast_id}",
-                            ),
-                            InlineKeyboardButton(
-                                text="Cancel!",
-                                callback_data=f"cncl_bdct+{broadcast_id}",
-                            ),
-                        ]
-                    ),
-                )
-
-                await broadcast_handler.start()
+            await broadcast_handler.start()
 
                 await reply_message.edit_text("Broadcast completed")
         except Exception as e:
