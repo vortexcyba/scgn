@@ -33,6 +33,7 @@ async def about_(c, m):
     await m.reply_text(
         text=ABOUT_TEXT.format(
             bot_name=me.mention),
+            disable_web_page_preview=True
             reply_markup=InlineKeyboardMarkup(BUTTONS),
             quote=True,
     )
@@ -48,8 +49,8 @@ async def about_cb(c, m):
     await m.message.edit(
         text=ABOUT_TEXT.format(
             bot_name=me.mention),
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(BUTTONS),
-            quote=True,
     )
 
 
