@@ -50,7 +50,7 @@ async def about_cb(c, m):
         text=ABOUT_TEXT.format(
             bot_name=me.mention),
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(BUTTONS),
+            reply_markup=InlineKeyboardMarkup(BUTTONS)
     )
 
 
