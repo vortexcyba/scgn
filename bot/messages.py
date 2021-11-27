@@ -20,7 +20,7 @@ class Messages:
     )
     PROCESS_UPLOAD_CONFIRM = (
         "__Successfully completed process in {total_process_duration}__\n\n"
-        "__Thanks you for using [me](https://t.me/scgnbot).__"
+        "__Thanks you for using [me](tg://user?id=1938116581).__"
     )
     WRONG_FORMAT = "__Please follow the specified format__"
     VIDEO_PROCESS_CAPTION = "__Sample video. {duration}s from {start}__"
