@@ -22,7 +22,7 @@ ABOUT_TEXT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
 
 
 @ScreenShotBot.on_message(filters.command("about") & filters.private & filters.incoming)
-async def about(c, m, cb=False):
+async def about(c, m, cb=True):
     me = await c.get_me()
     owner = await c.get_users(Config.AUTH_USERS)
 
