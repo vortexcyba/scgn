@@ -21,6 +21,7 @@ async def start(c, m, cb=False):
         InlineKeyboardButton("Hᴇʟᴘ ⁉️", callback_data="help"),
         InlineKeyboardButton("Sᴇᴛᴛɪɴɢs ⚙", callback_data="set+settings")
         ],[
+        InlineKeyboardButton("Aʙᴏᴜᴛ ❔", callback_data="about"),
         InlineKeyboardButton("Cʟᴏsᴇ 📛", callback_data="close")
     ]]
 
