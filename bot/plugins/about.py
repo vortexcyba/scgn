@@ -23,18 +23,16 @@ ABOUT_TEXT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
 
 ** Server:** [DigitalOcean(https://digitalocean.com)
 
-** Developer:** {bot_owner}
+** Developer:** [Jerin](tg://user?id=1329457821)
 """
 
 @ScreenShotBot.on_message(filters.private & filters.command("about"))
 async def about_(c, m):
     me = await c.get_me()
-    owner = await c.get_users(Config.AUTH_USERS)
 
     await m.reply_text(
         text=ABOUT_TEXT.format(
-            bot_name=me.mention,
-            bot_owner=owner.mention),
+            bot_name=me.mention),
             reply_markup=InlineKeyboardMarkup(BUTTONS),
             quote=True,
     )
@@ -45,14 +43,11 @@ async def about_(c, m):
 )
 async def about_cb(c, m):
     me = await c.get_me()
-    owner = await c.get_users(Config.AUTH_USERS)
 
     await m.answer()
     await m.message.edit(
         text=ABOUT_TEXT.format(
-            mention=m.from_user.mention,
-            bot_name=me.mention,
-            bot_owner=owner.mention),
+            bot_name=me.mention),
             reply_markup=InlineKeyboardMarkup(BUTTONS),
             quote=True,
     )
