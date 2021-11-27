@@ -5,6 +5,12 @@ from bot.screenshotbot import ScreenShotBot
 from bot.config import Config
 
 
+BUTTONS = [[
+    InlineKeyboardButton('Hᴏᴍᴇ 🏡', callback_data='home'),
+    InlineKeyboardButton('Hᴇʟᴘ ⁉️', callback_data='help')
+    ],[
+    InlineKeyboardButton('Cʟᴏsᴇ 📛', callback_data='close')
+]]
 
 
 ABOUT_TEXT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
@@ -20,29 +26,37 @@ ABOUT_TEXT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
 ** Developer:** {bot_owner}
 """
 
-
-@ScreenShotBot.on_message(filters.command("about") & filters.private & filters.incoming)
-async def about(c, m, cb=True):
+@ScreenShotBot.on_message(filters.private & filters.command("about"))
+async def about_(c, m):
     me = await c.get_me()
     owner = await c.get_users(Config.AUTH_USERS)
 
-    button = [[
-        InlineKeyboardButton('Hᴏᴍᴇ 🏡', callback_data='home'),
-        InlineKeyboardButton('Hᴇʟᴘ ⁉️', callback_data='help')
-        ],[
-        InlineKeyboardButton('Cʟᴏsᴇ 📛', callback_data="close")
-    ]]
-    reply_markup = InlineKeyboardMarkup(button)
-    if cb:
-        await m.message.edit(
-            text=ABOUT_TEXT.format(bot_name=me.mention(style='md'), bot_owner=owner.mention(style="md")),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup
-        )
-    else:
-        await m.reply_text(
-            text=ABOUT_TEXT.format(bot_name=me.mention(style='md'), bot_owner=owner.mention(style="md")),
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            quote=True
-        )
+    await m.reply_text(
+        text=ABOUT_TEXT.format(
+            bot_name=me.mention,
+            bot_owner=owner.mention),
+            reply_markup=InlineKeyboardMarkup(BUTTONS),
+            quote=True,
+    )
+
+
+@ScreenShotBot.on_callback_query(
+    filters.create(lambda _, __, query: query.data.startswith("about"))
+)
+async def about_cb(c, m):
+    me = await c.get_me()
+    owner = await c.get_users(Config.AUTH_USERS)
+
+    await m.answer()
+    await m.message.edit(
+        text=ABOUT_TEXT.format(
+            mention=m.from_user.mention,
+            bot_name=me.mention,
+            bot_owner=owner.mention),
+            reply_markup=InlineKeyboardMarkup(BUTTONS),
+            quote=True,
+    )
+
+
+
+
