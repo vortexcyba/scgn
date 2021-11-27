@@ -1,35 +1,35 @@
 class Messages:
     ADDED_TO_QUEUE = (
-        "Your request has been added to the queue. If you have more than {per_user_process_count} "
-        "ongoing processes, then this process will only start after one of them finishes."
+        "__Your request has been added to the queue. If you have more than {per_user_process_count}__ "
+        "__ongoing processes, then this process will only start after one of them finishes.__"
     )
-    MEDIA_MESSAGE_DELETED = "Why did you delete the file 😠, Now i cannot help you 😒."
-    CANNOT_OPEN_FILE = "😟 Sorry! I cannot open the file."
+    MEDIA_MESSAGE_DELETED = "__Why did you delete the file 😠, Now i cannot help you 😒.__"
+    CANNOT_OPEN_FILE = "__😟 Sorry! I cannot open the file.__"
     PROCESS_TIMEOUT = (
-        "😟 Sorry! process failed due to timeout. Your process was "
-        "taking too long to complete, hence cancelled."
+        "__😟 Sorry! process failed due to timeout. Your process was__ "
+        "__taking too long to complete, hence cancelled.__"
     )
     TRACK_USER_ACTIVITY = "User id: `{chat_id}`"
-    PROCESSING_REQUEST = "Processing your request, Please wait! 😴"
-    SCREENSHOT_AT = "ScreenShot at {time}"
-    SCREENSHOT_PROCESS_FAILED = "😟 Sorry! Screenshot generation failed possibly due to some infrastructure failure 😥."
+    PROCESSING_REQUEST = "__Processing your request, Please wait! 😴__"
+    SCREENSHOT_AT = "__ScreenShot at {time}__"
+    SCREENSHOT_PROCESS_FAILED = "__😟 Sorry! Screenshot generation failed possibly due to some infrastructure failure 😥.__"
     SCREENSHOT_PROCESS_SUCCESS = (
-        "🤓 You requested {count} screenshots and "
-        "{total_count} screenshots generated, "
-        "Now starting to upload!"
+        "__🤓 You requested {count} screenshots and__ "
+        "__{total_count} screenshots generated,__ "
+        "__Now starting to upload!;__"
     )
     PROCESS_UPLOAD_CONFIRM = (
-        "Successfully completed process in {total_process_duration}\n\n"
-        "Thanks you for using [me](https://t.me/scgnbot)."
+        "__Successfully completed process in {total_process_duration}__\n\n"
+        "__Thanks you for using [me](https://t.me/scgnbot).__"
     )
-    WRONG_FORMAT = "Please follow the specified format"
-    VIDEO_PROCESS_CAPTION = "Sample video. {duration}s from {start}"
-    SCREENSHOTS_START = "😀 Generating screenshots!."
+    WRONG_FORMAT = "__Please follow the specified format__"
+    VIDEO_PROCESS_CAPTION = "__Sample video. {duration}s from {start}__"
+    SCREENSHOTS_START = "__😀 Generating screenshots!.__"
 
-    SAMPLE_VIDEO_PROCESS_START = "😀 Generating Sample Video! This might take some time."
-    SAMPLE_VIDEO_PROCESS_FAILED = "😟 Sorry! Sample video generation failed possibly due to some infrastructure failure 😥."
+    SAMPLE_VIDEO_PROCESS_START = "__😀 Generating Sample Video! This might take some time.__"
+    SAMPLE_VIDEO_PROCESS_FAILED = "__😟 Sorry! Sample video generation failed possibly due to some infrastructure failure 😥.__"
     SAMPLE_VIDEO_PROCESS_SUCCESS = (
-        "🤓 Sample video was generated successfully!, Now starting to upload!"
+        "__🤓 Sample video was generated successfully!, Now starting to upload!__"
     )
     SAMPLE_VIDEO_PROCESS_FAILED_GENERATION = (
         "stream link : {file_link}\n\n duration {sample_duration} sample video "
@@ -44,37 +44,37 @@ class Messages:
         "stream link : {file_link}\n\nRequested manual screenshots\n\n{duration}"
     )
     MANUAL_SCREENSHOTS_NO_VALID_POSITIONS = (
-        "😟 Sorry! None of the given positions where valid!"
+        "__😟 Sorry! None of the given positions where valid!__"
     )
     MANUAL_SCREENSHOTS_VALID_PISITIONS_ABOVE_LIMIT = (
-        "😟 Sorry! Only 10 screenshots can be generated. Found {valid_positions_count} "
-        "valid positions in your request"
+        "__😟 Sorry! Only 10 screenshots can be generated. Found {valid_positions_count}__ "
+        "__valid positions in your request__"
     )
     MANUAL_SCREENSHOTS_INVALID_POSITIONS_ALERT = (
-        "Found {invalid_positions_count} invalid positions ({invalid_positions}).\n\n"
-        "😀 Generating screenshots after ignoring these!."
+        "__Found {invalid_positions_count} invalid positions ({invalid_positions}).__\n\n"
+        "__😀 Generating screenshots after ignoring these!.__"
     )
     MANUAL_SCREENSHOTS_FAILED_GENERATION = (
         "stream link : {file_link}\n\nmanual screenshots {raw_user_input}."
     )
 
-    TRIM_VIDEO_INVALID_RANGE = "The range you provided is invalid!"
+    TRIM_VIDEO_INVALID_RANGE = "__The range you provided is invalid!__"
     TRIM_VIDEO_DURATION_ERROR = (
-        "Please provide any range that's upto {max_duration}s."
-        " Your requested range **{start}:{end}** is `{request_duration}s` long!"
+        "__Please provide any range that's upto {max_duration}s.__"
+        " __Your requested range **{start}:{end}** is `{request_duration}s` long!__"
     )
     TRIM_VIDEO_OPEN_ERROR = "stream link : {file_link}\n\ntrim video requested\n\n{start}:{end}\n\n{duration}"
     TRIM_VIDEO_RANGE_OUT_OF_VIDEO_DURATION = (
-        "😟 Sorry! The requested range is out of the video's duration!."
+        "__😟 Sorry! The requested range is out of the video's duration!.__"
     )
     TRIM_VIDEO_PROCESS_FAILED = (
-        "😟 Sorry! video trimming failed possibly due to some infrastructure failure 😥."
+        "__😟 Sorry! video trimming failed possibly due to some infrastructure failure 😥.__"
     )
     TRIM_VIDEO_PROCESS_FAILED_GENERATION = "stream link : {file_link}\n\nVideo trim failed.\n\n{start}:{end}\n\n{ffmpeg_output}"
     TRIM_VIDEO_PROCESS_SUCCESS = (
-        "🤓 Video trimmed successfully!, Now starting to upload!"
+        "__🤓 Video trimmed successfully!, Now starting to upload!__"
     )
-    TRIM_VIDEO_START = "😀 Trimming Your Video! This might take some time."
+    TRIM_VIDEO_START = "__😀 Trimming Your Video! This might take some time.__"
 
     SCREENSHOTS_OPEN_ERROR = "stream link : {file_link}\n\nRequested screenshots: {num_screenshots}.\n\n{duration}"
     SCREENSHOTS_FAILED_GENERATION = (
@@ -82,5 +82,5 @@ class Messages:
         "and Screen shots where not generated."
     )
 
-    MEDIAINFO_START = "Finding the media info, media info will be send here shortly!"
-    SETTINGS = "Here You can configure my behavior.\n\nPress the button to change the settings."
+    MEDIAINFO_START = "__Finding the media info, media info will be send here shortly!__"
+    SETTINGS = "__Here You can configure my behavior.\n\nPress the button to change the settings.__"
