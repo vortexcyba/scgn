@@ -18,8 +18,6 @@ async def start(c, m, cb=False):
         print(e)
 
     BUTTONS = [[
-        InlineKeyboardButton("Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ 👤", url=f"https://t.me/{username}")
-        ],[
         InlineKeyboardButton("Hᴇʟᴘ ⁉️", callback_data="help"),
         InlineKeyboardButton("Sᴇᴛᴛɪɴɢs ⚙", callback_data="set+settings")
         ],[
