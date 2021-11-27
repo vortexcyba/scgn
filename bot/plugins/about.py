@@ -21,7 +21,7 @@ ABOUT_TEXT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
 
 ** FrameWork:** [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-** Server:** [DigitalOcean(https://digitalocean.com)
+** Server:** [DigitalOcean](https://digitalocean.com)
 
 ** Developer:** [Jerin](tg://user?id=1329457821)
 """
