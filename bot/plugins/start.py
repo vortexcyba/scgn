@@ -18,11 +18,11 @@ async def start(c, m, cb=False):
         print(e)
 
     BUTTONS = [[
-        InlineKeyboardButton("Hᴇʟᴘ ⁉️", callback_data="help"),
-        InlineKeyboardButton("Sᴇᴛᴛɪɴɢs ⚙", callback_data="set+settings")
+        InlineKeyboardButton("𝖧𝖾𝗅𝗉 ⁉️", callback_data="help"),
+        InlineKeyboardButton("𝖲𝖾𝗍𝗍𝗂𝗇𝗀𝗌 ⚙", callback_data="set+settings")
         ],[
-        InlineKeyboardButton("Aʙᴏᴜᴛ ❔", callback_data="about"),
-        InlineKeyboardButton("Cʟᴏsᴇ 📛", callback_data="close")
+        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 ❔", callback_data="about"),
+        InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾 📛", callback_data="close")
     ]]
 
     TEXT = f"__👋 Hi {m.from_user.mention},\n\nI'm Screenshot Generator Bot. I can provide screenshots, sample video from__"
