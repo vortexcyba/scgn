@@ -13,17 +13,17 @@ BUTTONS = [[
 ]]
 
 
-ABOUT_TEXT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
+ABOUT_TEXT = """**Mʏ Dᴇᴛᴀɪʟs:**
 
-** My Name:** {bot_name}
+**🤖 Bᴏᴛ:** {bot_name}
     
-** Language:** [Python 3](https://www.python.org/)
+**✒️ Lᴀɴɢᴜᴀɢᴇ:** [Python 3](https://www.python.org)
 
-** FrameWork:** [Pyrogram](https://github.com/pyrogram/pyrogram)
+**📔 Lɪʙʀᴀʀʏ:** [Pyrogram](https://docs.pyrogram.org)
 
-** Server:** [DigitalOcean](https://digitalocean.com)
+**📡 Sᴇʀᴠᴇʀ:** [DigitalOcean](https://digitalocean.com)
 
-** Developer:** [Jerin](tg://user?id=1329457821)
+**👤 Dᴇᴠᴇʟᴏᴘᴇʀ:** [Jerin](tg://user?id=1329457821)
 """
 
 @ScreenShotBot.on_message(filters.private & filters.command("about"))
