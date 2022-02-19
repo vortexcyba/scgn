@@ -3,18 +3,18 @@ import os
 
 class Config:
 
-    API_ID = int(os.environ.get("API_ID"))
-    API_HASH = os.environ.get("API_HASH")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
-    SESSION_NAME = os.environ.get("SESSION_NAME", ":memory:")
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
-    DATABASE_URL = os.environ.get("DATABASE_URL")
-    AUTH_USERS = [int(i) for i in os.environ.get("AUTH_USERS", "").split(" ")]
+    API_ID = 5019679
+    API_HASH = "a25681486dc94d31353e99384da28521"
+    BOT_TOKEN = "1938116581:AAG9-EA5p77NG_ABKboXoEUsbVEHV5N3OaY"
+    SESSION_NAME = "imjerin"
+    LOG_CHANNEL = -1001302779504
+    DATABASE_URL = "mongodb+srv://jerinjohny:jerinjohny@cluster0.jk3zi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    AUTH_USERS = [1329457821]
     MAX_PROCESSES_PER_USER = int(os.environ.get("MAX_PROCESSES_PER_USER", 2))
     MAX_TRIM_DURATION = int(os.environ.get("MAX_TRIM_DURATION", 600))
-    TRACK_CHANNEL = int(os.environ.get("TRACK_CHANNEL", False))
-    SLOW_SPEED_DELAY = int(os.environ.get("SLOW_SPEED_DELAY", 5))
-    HOST = os.environ.get("HOST", "")
+    TRACK_CHANNEL = -1001302779504
+    SLOW_SPEED_DELAY = 0
+    HOST = "http://localhost:8080"
     TIMEOUT = int(os.environ.get("TIMEOUT", 60 * 30))
     DEBUG = bool(os.environ.get("DEBUG"))
     WORKER_COUNT = int(os.environ.get("WORKER_COUNT", 20))
