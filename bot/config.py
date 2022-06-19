@@ -3,9 +3,9 @@ import os
 
 class Config:
 
-    API_ID = 5019679
-    API_HASH = "a25681486dc94d31353e99384da28521"
-    BOT_TOKEN = "1938116581:AAG9-EA5p77NG_ABKboXoEUsbVEHV5N3OaY"
+    API_ID = 1492122
+    API_HASH = "fa804e4ae900dd535854db248b075624"
+    BOT_TOKEN = "5309766626:AAHwM4ZVzC8LAJIVloRTrO3kAhdxAvSTBdk"
     SESSION_NAME = "imjerin"
     LOG_CHANNEL = -1001302779504
     DATABASE_URL = "mongodb+srv://jerinjohny:jerinjohny@cluster0.jk3zi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
